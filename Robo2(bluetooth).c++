@@ -3,24 +3,24 @@ BluetoothSerial SerialBT; //Registrand variável de bluetooth
 char comando;
 
 
-//Definido as portas q conectarão com os motores
-#define IN1 26
-#define IN2 27
-#define IN3 17
-#define IN4 16
+//Definido portas q conectarão com os motores
+#define IN1 27
+#define IN2 26
+#define IN3 25
+#define IN4 33
 
-#define ENA 25//Porta de velocidade do Motor 1
-#define ENB 33//Porta de velocidade do Motor 2
+#define ENA 14
+#define ENB 32
 
 
 void setup(){
 
-pinMode(IN1,OUTPUT); // Saída para motor 1
-pinMode(IN2,OUTPUT); // Saída para motor 1
-pinMode(IN3,OUTPUT); // Saída para motor 2
-pinMode(IN4,OUTPUT); // Saída para motor 2
-pinMode(ENA,OUTPUT); // velocidade para motor 1
-pinMode(ENB,OUTPUT); // velocidade para motor 2
+pinMode(IN1,OUTPUT); 
+pinMode(IN2,OUTPUT); 
+pinMode(IN3,OUTPUT); 
+pinMode(IN4,OUTPUT); 
+pinMode(ENA,OUTPUT); 
+pinMode(ENB,OUTPUT); 
 
 analogWrite(ENA,200); // Velocidade
 analogWrite(ENB, 200); //Velocidade 
@@ -31,7 +31,7 @@ delay(1000); // Calma cocada espara 1 segundo
 
 }
 
-void loop() //Ordem do robõ
+void loop() 
 {
    if(SerialBT.available()) //Veja de recebeu algum comando
    {
@@ -39,22 +39,22 @@ void loop() //Ordem do robõ
 
     //Sistema de if else para cada caracter recebido 
 
-    if (comando == 'Y'){  //recebeu Y, o robõ vai pra frente
+    if (comando == 'Y'){  // Y frente
       robo_frente();
     }
-    else if(comando == 'X'){ //recebeu X, o robõ vai pra direita
+    else if(comando == 'X'){ // X direita
       robo_direita();
     }
-    else if(comando == 'B'){ //recebeu B, o robõ vai pra esquerda
+    else if(comando == 'B'){ // B esquerda
       robo_esquerda();
     }
-    else if(comando == 'A'){ //recebeu A, o robõ vai pra trás
+    else if(comando == 'A'){ // A trás
       robo_re();
     }
-    else if(comando == 'M'){ //recebeu M, o robõ trava os motores
+    else if(comando == 'M'){ // M trava
       robo_travado();
     }
-    else if(comando == 'S'){ //recebeu S, o robõ parou
+    else if(comando == 'S'){ // S para
       robo_parado();
     }
    }
