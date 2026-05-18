@@ -1,4 +1,3 @@
-
 //PONTE1
 #define IN1 27
 #define IN2 26
@@ -49,6 +48,8 @@ delay(1000); // Calma cocada espara 1 segundo
 void loop()
 {
 robo_frente();
+
+
 }
 
 void robo_frente()
@@ -59,8 +60,8 @@ void robo_frente()
   digitalWrite(IN4,LOW);
 
   digitalWrite(IN5,HIGH);
-  digitalWrite(IN6,LOW);
-  digitalWrite(IN7,HIGH);
+  digitalWrite(IN6,HIGH);
+  digitalWrite(IN7,LOW);
   digitalWrite(IN8,LOW);
   }
 
