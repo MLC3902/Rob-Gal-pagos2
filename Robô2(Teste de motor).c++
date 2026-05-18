@@ -49,29 +49,13 @@ delay(1000); // Calma cocada espara 1 segundo
 void loop()
 {
 robo_frente();
-
-delay(5000);
-
-robo_re();
-
-delay(5000);
-
-robo_esquerda();
-
-delay(5000);
-
-robo_direita();
-
-delay(5000);
-
-robo_parado();
 }
 
 void robo_frente()
 {
   digitalWrite(IN1,HIGH);
-  digitalWrite(IN2,LOW);
-  digitalWrite(IN3,HIGH);
+  digitalWrite(IN2,HIGH);
+  digitalWrite(IN3,LOW);
   digitalWrite(IN4,LOW);
 
   digitalWrite(IN5,HIGH);
