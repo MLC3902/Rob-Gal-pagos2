@@ -54,22 +54,22 @@ void loop()
 
     //Sistema de if else para cada caracter recebido 
 
-    if (comando == 'Y'){  // Y frente
+    if (comando == 'F'){  // F frente
       robo_frente();
     }
-    else if(comando == 'X'){ // X direita
+    else if(comando == 'D'){ // D direita
       robo_direita();
     }
-    else if(comando == 'B'){ // B esquerda
+    else if(comando == 'E'){ // E esquerda
       robo_esquerda();
     }
-    else if(comando == 'A'){ // A trás
+    else if(comando == 'R'){ // R trás
       robo_re();
     }
-    else if(comando == 'M'){ // M trava
+    else if(comando == 'T'){ // T trava
       robo_travado();
     }
-    else if(comando == 'S'){ // S para
+    else if(comando == 'P'){ // P para
       robo_parado();
     }
    }
